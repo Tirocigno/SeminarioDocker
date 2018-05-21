@@ -80,6 +80,7 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \graphicspath{ {../res/} }%setta il path predefinito per le immagini
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -214,11 +215,12 @@ Si piò specificare una singola istruzione, tale comando sarà eseguito all'avvi
 %------------------------------------------------
 \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
 \frametitle{Dockerfile:un esempio}
+\begin{block}{\textit{Dockerfile}}
 \begin{verbatim}
 FROM library/openjdk:latest
 
 EXPOSE 8080
-RUN git clone 
+RUN git clone
  https://gitlab.com/das-lab/lpaas/lpaas-ws.git &&\
 cd lpaas-ws &&\
 chmod u+x gradlew &&\
@@ -229,13 +231,58 @@ chmod u+x script.sh &&\
 
 CMD ["/lpaas-ws/script.sh"]
 \end{verbatim}
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+\section{Live demo}
+\begin{frame}
+\Huge{\centerline{Live demo}}
+\end{frame}
+
+%-------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Primi passi}
+
+\begin{block}{Installazione della piattaforma(per tutti gli OS)}
+\href{https://docs.docker.com/install}{https://docs.docker.com/install/}
+\end{block}
+
+\begin{block}{Verifica della corretta installazione(da eseguire su una shell)}
+\begin{verbatim}
+docker run hello-world
+\end{verbatim}
+\end{block}
+\end{frame}
+%-----------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Una semplice bash}
+\begin{block}{Ubuntu bash}
+\begin{verbatim}
+docker run -ti ubuntu
+\end{verbatim}
+\end{block}
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}[fragile]
+\frametitle{NodeJS}
+\begin{block}{Un semplice container che manda in esecuzione un file}
+\begin{verbatim}
+TODO
+\end{verbatim}
+\end{block}
 \end{frame}
 
 
-%------------------------------------------------
+
+
+
+
 
 \begin{frame}
-\Huge{\centerline{The End}}
+\Huge{\centerline{Grazie per l'attenzione!}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
