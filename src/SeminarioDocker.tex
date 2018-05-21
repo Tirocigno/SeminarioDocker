@@ -102,11 +102,12 @@ Alma Mater Studiorum - Università di Bologna, Cesena. \\ % Your institution for
 \titlepage % Print the title page as the first slide
 \end{frame}
 
+%------------------------------------------------
 \begin{frame}
 \frametitle{Overview} % Table of contents slide, comment this block out to remove it
 \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
-
+%------------------------------------------------
 %----------------------------------------------------------------------------------------
 %	PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
@@ -210,6 +211,7 @@ Si piò specificare una singola istruzione, tale comando sarà eseguito all'avvi
 \end{block}
 \end{frame}
 
+%------------------------------------------------
 \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
 \frametitle{Dockerfile:un esempio}
 \begin{verbatim}
@@ -227,26 +229,8 @@ chmod u+x script.sh &&\
 
 CMD ["/lpaas-ws/script.sh"]
 \end{verbatim}
-\end{example}
 \end{frame}
 
-
-%------------------------------------------------
-
-%------------------------------------------------
-\section{Live Demo}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
-\end{frame}
 
 %------------------------------------------------
 
