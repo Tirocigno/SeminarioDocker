@@ -1,0 +1,47 @@
+Slides 2:
+Storia della virtualizzazione.
+Anni 60 -> gestione risorse.
+Anni 2000 -> Boom grazie agli ipervisori
+Virtualizzazione classica adatta a vecchio modo di concepire il software(monolotico, non scalabile, con tempi di aggiornamento lunghi).
+Nuovi paradigmi entrano in gioco(architetture a microservizi, clustering) orientati alla creazione di sistemi distribuiti.
+Vecchia virtualizzazione diventa inefficente.
+Attorno alla fine del decennio scorso, nasce l'idea di container, come nella vita vera, possibilità di incapsulare applicazioni di natura differente in un unico contenitore
+compatibile con i maggiori sistemi, virtualizzando quindi il contesto attorno.
+Nato in ambiente linux, l'approccio a containers preserva i vantaggi delle macchine virtuali-> isolamento e portabilità 
+e rende molto più leggera l'operazione di virtualizzazione
+virtualizzando solo ciò che è necessario(user space) e condividendo ciò che sarebbe in comune(kernel space).
+
+Slide 3
+questo comporta che, sulla carta: 
+Container sicuri e isolati come VM, ma molto più leggeri.
+
+Slide 4:
+Guardando la figura, si può notare come a sinistra ci siano molti più layer di virtualizzazione. a destra invece l'impatto è ridotto al minimo, 
+condividendo tutto ciò che è possibile condividere.
+Paragone Appartamento-Casa.
+
+Slide 5: Sulla carta tutto molto bello, nuova pietra filosofale, nella pratica fa tutto abbastanza schifo fino al 2013(container Solaris, Jail freebsd), quando
+nasce Docker da dotCloud.
+L'idea di base è una: creare una piattaforma easy to learn, hard to master, che renda trasparente la maggior parte della complessità a tutti gli utenti.
+Questa piattaforma nasce all'inizio con lo scopo di creare ambienti di sviluppo su cui sviluppare/testare le applicazioni, in seguito grazie al successo nella
+community assumerà molte nuove funzionalità.
+Sotto sotto, è ancora tutto linux, in particolare è esteso il modello a container LXC, modello nativo del Kernel Linux.
+
+Slide 6.
+Come detto prima, in tanti usano Docker, e in tanti modi diversi, alcuni supportano, altri sfruttano.
+
+Slide 7.
+Leggere gli svantaggi -> Open Source caotico e non chiaro lo stato di alcuni moduli(tipo infinit).
+
+Slide 10.
+Andando più nello specifico, l'architettura di docker è organizzata a moduli, integrabili e sovrapponibili tra di loro, ogni modulo si occupa di una funzione differente
+ed ha più o meno importanza a seconda dell'utilizzo che di Docker che si vuole impiegare.
+Leggere i tre scritti e parlare anche di Docker compose.
+
+Slide 11.
+Leggere i componenti dell'engine
+
+Slide 12
+Mostrare le interazioni con l'engine.
+
+Slide 10
