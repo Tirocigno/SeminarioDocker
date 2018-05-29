@@ -89,7 +89,7 @@
 \title[Docker]{Docker - Build, Ship and Run Any App, Anywhere. } % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Federico Naldini} % Your name
-\institute[Unibo] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\institute[Università di Bologna] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
 Alma Mater Studiorum - Università di Bologna, Cesena. \\ % Your institution for the title page
 \medskip
@@ -119,10 +119,6 @@ Alma Mater Studiorum - Università di Bologna, Cesena. \\ % Your institution for
 
 \subsection{Introduzione ai \textit{containers}}
 
-%\subsection{Architettura del sistema Docker} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
-
-%\subsection{\textit{Docker Swarm Mode}}
-
 
 \begin{frame}
 \frametitle{Che cos'è un \textit{container}?}
@@ -150,7 +146,7 @@ A differenza delle \textit{VM} , l'idea dietro all'approccio a \textit{container
 
 %------------------------------------------------
 
-\subsection{Architettura del sistema Docker} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+\subsection{Docker: le basi} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
 %-----------------------------------------------
 \begin{frame}
@@ -159,6 +155,48 @@ Il progetto open source Docker viene rilasciato nel 2013 da una compagnia chiama
 Docker si pone come obbiettivo di automatizzare lo sviluppo di applicazioni all’interno di containers software, sfruttando tutti i vantaggi di una virtualizzazione a livello di sistema operativo; per riuscire a fare ciò, si avvale delle funzionalità di isolamento presenti nel kernel Linux, come ad esempio cgroups, utilizzato per la gestione di risorse fisiche, e namespaces, che invece garantiscono un isolamento a livello di processo.
 \end{frame}
 
+%-----------------------------------------------
+\begin{frame}
+\frametitle{I vantaggi della piattaforma Docker}
+\begin{itemize}
+\item Open Source.
+\item Ogni applicazione è eseguita in una \textit{Sandbox}
+\item Applicazioni leggere da eseguire.
+\item Ogni applicazione è eseguita in una \textit{Sandbox}
+\item Ogni \textit{container} è isolato da ogni altro sistema, salvo diverse istruzioni.
+\item Supporto diretto al \textit{Clustering}, utilizzando un modulo apposito chiamato \texttt{Swarm Module}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------
+\begin{frame}
+\frametitle{ Chi utlizza Docker? E come?}
+%Le modalità di utilizzo di docker sono talmente varie che molte compagnie utilizzano la piattaforma per scopi molto diversi
+\centering\includegraphics{pic4}
+\end{frame}
+
+%-----------------------------------------------
+\begin{frame}
+\frametitle{Gli svantaggi della piattaforma Docker}
+\begin{itemize}
+\item Vincolato al kernel Linux.
+\item Supporto limitato allo storage permanente delle modifiche.
+\item Open Source.
+\end{itemize}
+\end{frame}
+
+\subsection{Architettura del sistema Docker} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
+
+
+\begin{frame}
+\frametitle{I moduli di Docker}
+Lo scheletro dell'Archittettura di Docker si compone di diversi moduli, ciascuno con il suo compito ben definito:
+\begin{itemize}
+\item \textbf{Docker Engine}: Cuore del sistema Docker, si occupa di mandare in esecuzione i singoli container.
+\item  \textbf{Docker Machine}: Modulo utilizzato per creare macchine virtuali minimali per portare Docker su sistemi senza kernel Linux(Windows, MacOs), oggi soppiantato da applicazione native per i sistemi.
+\item  \textbf{Docker Swarm}: si occupa della gestione della \textit{Docker Swarm Mode}, ovvero una modalità per gestire cluster di \textit{containers} Docker.
+\end{itemize}
+\end{frame}
 
 \begin{frame}
 \frametitle{ \textit{Docker Engine}}
@@ -275,14 +313,22 @@ docker run -p 3000:3000 tirocigno/nodejssampleapp
 \end{block}
 \end{frame}
 
+%----------------------------------------------------------
+\begin{frame}
+\frametitle{Riferimenti}
+\begin{itemize}
+\item Sito ufficiale Docker: \href{https://www.docker.com/}{https://www.docker.com/}
+\item Architettura di Docker: \href{https://docs.docker.com/engine/docker-overview/}{https://docs.docker.com/engine/docker-overview/}
 
 
+\end{itemize}
+\end{frame}
 
 
 
 
 \begin{frame}
-\Huge{\centerline{Grazie per l'attenzione!}}
+\titlepage % Print the title page as the last slide
 \end{frame}
 
 %----------------------------------------------------------------------------------------
